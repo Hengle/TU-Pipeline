@@ -1,0 +1,201 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8073188599921301876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e32e72b6a3f58a24c9033e2b9275eea0, type: 3}
+  m_Name: ScreenSpaceShadows
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  m_Shader: {fileID: 4800000, guid: 0f854b35a0cf61a429bd5dcfea30eddd, type: 3}
+  m_Settings:
+    HighQuality: 1
+    PenumbraScale: 4
+--- !u!114 &-5180907719149283071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6894b589fd659fd468960578dc4d6582, type: 3}
+  m_Name: CustomProcessRendererFeature
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  NormalTexture: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de640fe3d0db1804a85f9fc8f5cadab6, type: 3}
+  m_Name: Renderer Data
+  m_EditorClassIdentifier: 
+  debugShaders:
+    debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7,
+      type: 3}
+    hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
+  m_RendererFeatures:
+  - {fileID: 8917751732146939368}
+  - {fileID: -5180907719149283071}
+  - {fileID: -8073188599921301876}
+  m_RendererFeatureMap: e825bebdf337c27b0119070ae1b719b88c26f5f0bd45f68f
+  m_UseNativeRenderPass: 1
+  postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
+  xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
+  shaders:
+    blitPS: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
+    copyDepthPS: {fileID: 4800000, guid: d6dae50ee9e1bfa4db75f19f99355220, type: 3}
+    screenSpaceShadowPS: {fileID: 0}
+    samplingPS: {fileID: 4800000, guid: 04c410c9937594faa893a11dceb85f7e, type: 3}
+    stencilDeferredPS: {fileID: 4800000, guid: e9155b26e1bc55942a41e518703fe304, type: 3}
+    fallbackErrorPS: {fileID: 4800000, guid: e6e9a19c3678ded42a3bc431ebef7dbd, type: 3}
+    fallbackLoadingPS: {fileID: 4800000, guid: 7f888aff2ac86494babad1c2c5daeee2, type: 3}
+    materialErrorPS: {fileID: 4800000, guid: 5fd9a8feb75a4b5894c241777f519d4e, type: 3}
+    coreBlitPS: {fileID: 4800000, guid: 93446b5c5339d4f00b85c159e1159b7c, type: 3}
+    coreBlitColorAndDepthPS: {fileID: 4800000, guid: d104b2fc1ca6445babb8e90b0758136b,
+      type: 3}
+    blitHDROverlay: {fileID: 4800000, guid: a89bee29cffa951418fc1e2da94d1959, type: 3}
+    cameraMotionVector: {fileID: 4800000, guid: c56b7e0d4c7cb484e959caeeedae9bbf,
+      type: 3}
+    objectMotionVector: {fileID: 4800000, guid: 7b3ede40266cd49a395def176e1bc486,
+      type: 3}
+    dataDrivenLensFlare: {fileID: 4800000, guid: 6cda457ac28612740adb23da5d39ea92,
+      type: 3}
+  m_AssetVersion: 2
+  m_OpaqueLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_TransparentLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_DefaultStencilState:
+    overrideStencilState: 0
+    stencilReference: 0
+    stencilCompareFunction: 8
+    passOperation: 2
+    failOperation: 0
+    zFailOperation: 0
+  m_ShadowTransparentReceive: 0
+  m_RenderingMode: 0
+  m_DepthPrimingMode: 0
+  m_CopyDepthMode: 0
+  m_AccurateGbufferNormals: 0
+  m_IntermediateTextureMode: 1
+--- !u!114 &8917751732146939368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ee74ed553637f428f7031e38b9aecf, type: 3}
+  m_Name: SSGI
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  mSSGISettings:
+    IndirectDiffuse: 1
+    SSR: 1
+    AO: 1
+    AntiAliasing: 1
+    CameraGBuffer: 1
+  mCameraGBufferSettings:
+    BaseColor: 1
+    Specular: 1
+    Reflection: 1
+  mBaseColorGBufferSettings:
+    LayerMask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+  mSpecularGBufferSettings:
+    LayerMask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+  mReflectionGBufferSettings:
+    LayerMask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+  mHiZBufferSettings:
+    MipCount: 10
+  mScreenSpaceIndirectDiffuseSettings:
+    Intensity: 0.8
+    MaxDistance: 100
+    Stride: 2
+    StepCount: 60
+    Thickness: 0.5
+    JitterDither: 1
+    SPP: 2
+    ScreenFade: 0.1
+    motionType: 1
+    FrameInfluence: 0.01
+    BlueNoise: {fileID: 2800000, guid: ef235d36a2455834db1c62fb6cc3c40b, type: 3}
+  mSSRType: 2
+  mSSRSettings:
+    Intensity: 0.8
+    AccelerateType: 1
+    MaxDistance: 10
+    Stride: 2
+    StepCount: 40
+    Thickness: 0.5
+    BinaryCount: 6
+    JitterDither: 1
+    BlendMode: 0
+    BlurRadius: 1
+    ApplyCameraGBuffer: 0
+  mSSSRSettings:
+    MaxDistance: 10
+    Stride: 1
+    StepCount: 120
+    Thickness: 0.5
+    JitterDither: 1
+    SPP: 2
+    ScreenFade: 0.1
+    BRDFBias: 0.7
+    motionType: 1
+    FrameInfluence: 0.01
+    BlueNoise: {fileID: 2800000, guid: ef235d36a2455834db1c62fb6cc3c40b, type: 3}
+    PreintegratedGF_LUT: {fileID: 2800000, guid: d2025f59b8a27c94d87252a02d039ab1,
+      type: 3}
+  mSSPRSettings:
+    RTSize: 2048
+    ReflectHeight: 0.2
+    StretchIntensity: 0
+    StretchThreshold: 0.1
+    EdgeFadeOut: 0.2
+    ReflectorLayer:
+      serializedVersion: 2
+      m_Bits: 0
+  mAOType: 0
+  mSSAOSettings:
+    Intensity: 0.5
+    Radius: 0.25
+    Falloff: 100
+  mHBAOSettings:
+    Intensity: 0.5
+    Radius: 0.5
+    MaxRadiusPixels: 32
+    AngleBias: 0.1
+  mAntiAliasingType: 0
+  mFXAASettings:
+    ContrastThreshold: 0.0312
+    RelativeThreshold: 0.063
+    SubpixelBlending: 1
+    LowQuality: 0
+  mTAASettings:
+    JitterScale: 1
+    FrameInfluence: 0.05
+    motionType: 0

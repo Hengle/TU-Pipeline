@@ -1,0 +1,21 @@
+// Each #kernel tells which function to compile; you can have many kernels
+
+
+float _ShadowMapWidth;
+float _ShadowMapHeight;
+float _ShadowCasterCascadesCount;
+float _CurrentFarCascadeIndex;
+
+RWTexture2D<float> _ShadowMap;
+
+#pragma kernel ShadowMapClear
+[numthreads(8,8,1)]
+void ShadowMapClear(uint3 id : SV_DispatchThreadID) {
+    // 在C#端让Count<4不进入该ComputeShader
+    // int resolution = _ShadowCasterCascadesCount == 2 ? _ShadowMapWidth : _ShadowMapWidth / 2;
+    float resolution = _ShadowMapWidth / 2.0;
+    float indexX = floor(id.x / resolution), indexY = floor(id.y / resolution);
+    if ((float)id.y < resolution * 2 || abs(indexY * 2.0 + indexX - _CurrentFarCascadeIndex) < 0.0001) {
+        _ShadowMap[id.xy] = 0.0;
+    }
+}
